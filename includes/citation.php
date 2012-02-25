@@ -10,7 +10,7 @@
 		$tab[]=$element->nodeValue;
 	}
 	
-	echo "<center><b>CITATION DU JOUR</b></center><br />";
+	echo "<center><b>"._("CITATION DU JOUR")."</b></center><br />";
 	
 	echo $tab[rand(0, count($tab)-1)];
 ?>

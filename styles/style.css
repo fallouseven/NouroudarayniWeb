@@ -42,19 +42,12 @@ body {
 	padding-top: 10px;	
 }
 
-/* ============================== CONTENT ============================== */
-
-#content {
-	width: 980px;	
-	margin: auto;	
-	padding: 20px 0px;	
-}
-
 /* ============== CONTENU ============== */
 
 #contenu {
 	float: left;
 	width: 720px;
+	margin-left:10px;
 }
 
 /* ============== SIDEBAR ============== */

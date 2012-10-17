@@ -4,11 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="./scripts/cufon-yui.js" type="text/javascript"></script>
 <script src="./scripts/Bebas_400.font.js" type="text/javascript"></script>
-<link rel="stylesheet" href="./styles/stylenewspreview.css" type="text/css" media="screen"/>
 <title>Home</title>
 </head>
 
 <body>
-<div id="news"><?php include 'newspreview.php' ?></div>
+<div id="news"><?php include './newspreview.php' ?></div>
+<hr/><br />
+<div class="videoNew"><?php include './video_new.php' ?></div>
 </body>
 </html>

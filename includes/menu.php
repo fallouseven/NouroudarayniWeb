@@ -14,12 +14,12 @@
 		<div id="menu">
 			<ul id="MenuDeroulant">
 				<li> <a class="active" href="./index.php"> <img src="./images/icon_home.gif" alt="Icone Home" /> </a> </li>
-			    <li><a href="#"><?php echo gettext("Dahira")?></a>			
+			    <li><a href="#">Dahira</a>			
 			        <ul>            	
-			            <li><a href="#"><?php echo _("Historique")?></a></li>		
-			            <li><a href="#"><?php echo _("Organigramme")?></a></li>		
-			            <li><a href="#"><?php echo _("Projet")?></a></li>		
-			            <li><a href="#"><?php echo _("Contact")?></a></li>
+			            <li><a href="#">Historique</a></li>		
+			            <li><a href="#">Organigramme</a></li>		
+			            <li><a href="#">"Projet"</a></li>		
+			            <li><a href="#">Contact</a></li>
 			        </ul>			
 			    </li>		
 			    <li><a href="#">Islam</a>			

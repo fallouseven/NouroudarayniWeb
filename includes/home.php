@@ -4,6 +4,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="./scripts/cufon-yui.js" type="text/javascript"></script>
 <script src="./scripts/Bebas_400.font.js" type="text/javascript"></script>
+<script type="text/javascript">
+			  $(document).ready(function(){
+				 $("a.ajax").click(function() {
+					 $.ajax({
+						   url:$(this).attr("href"),
+						   success: function(retour){
+						  $("div.contenant").empty().append(retour);
+						   }
+					   });
+					   return false;
+				 });
+			  });
+		</script>
 <title>Home</title>
 </head>
 

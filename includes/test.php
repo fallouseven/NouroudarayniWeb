@@ -1,5 +1,6 @@
 <?php
 	require('../classes/Utilitaire.php');
+	require('testplaylist.php');
 	$valide_image_extensions = array('jpg', 'jpeg', 'gif', 'png', 'bmp');
 	$valide_audio_extensions = array('mp3','mp4','wma');
 	$dossierBaseArticle = "../articles/nouveau/*";
@@ -90,7 +91,7 @@
 					 $docImage->load($fileImageXML);
 					 $image_elt = $docImage->getElementsByTagName('images')->item(0);
 				  };
-				  if(!file_exists($fileImageXML)){
+				  if(!file_exists($fileAudioXML)){
 					  $docAudio->version = '1.0';
 					  $docAudio->encoding = 'utf-8';
 					  $audio_elt = $docAudio->createElement('audios');
@@ -99,6 +100,7 @@
 					 $docAudio->load($fileAudioXML);
 					 $audio_elt = $docAudio->getElementsByTagName('audios')->item(0);
 				  };
+				$audioArray = array();
 				foreach (glob("$rep/*") as $filename)
 				{
 					$ext = strtolower(pathinfo($filename,  PATHINFO_EXTENSION));
@@ -111,9 +113,11 @@
 					else if(in_array($ext, $valide_audio_extensions))
 					{
 						$audio_elt->appendChild($docAudio->createElement('audio', basename($filename)));
+						array_push($audioArray, $filename);
 						//rename($filename, "../media/audio/".basename($filename));
 					}
 				}
+				creerPlayList('khassaide', $audioArray);
 				if($docImage !== NULL){
 					 $docImage->preserveWhiteSpace = FALSE;
 					 $docImage->formatOutput = true;  

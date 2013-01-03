@@ -1,13 +1,15 @@
+#playlist{
+	height:auto;
+	}
 #dewbody {
 	font-family:"Myriad","Myriad Pro",Georgia,Helvetica,Sans-serif;
 	height:100%;
-	padding:0 0 5em 0;
 	margin:0;
 	background:#eee;
 }
 
 #dewbody #content {
-	width:50%;
+	/*width:50%;*/
 	margin:auto;
 }
 
@@ -17,7 +19,7 @@
 }
 
 #dewbody #players object {
-	margin:20px 0 20px 50px;
+	/*margin:20px 0 20px 50px;*/
 }
 
 #dewbody h1 {
@@ -31,7 +33,7 @@
 #dewbody h2 {
 	font-weight:normal;
 	background:#eee;
-	padding:2em 10px 10px 10px;
+	padding:10px 10px 10px 10px;
 	color:#444;
 	font-size:130%;
 	text-align:left;

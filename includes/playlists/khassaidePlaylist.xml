@@ -7,7 +7,7 @@
   <info/>
   <trackList>
     <track>
-      <location>../articles/nouveau/test audio/Abdou Khadre Gassama - Assirou.mp3</location>
+      <location>./articles/nouveau/test audio/Abdou Khadre Gassama - Assirou.mp3</location>
       <creator>Cheikh Ahmadou Bamba</creator>
       <album/>
       <title>Abdou Khadre Gassama - Assirou.mp3</title>
@@ -18,7 +18,7 @@
       <link/>
     </track>
     <track>
-      <location>../articles/nouveau/test audio/Jazbu  - Serigne Abdoul Ahad Toure.mp3</location>
+      <location>./articles/nouveau/test audio/Jazbu  - Serigne Abdoul Ahad Toure.mp3</location>
       <creator>Cheikh Ahmadou Bamba</creator>
       <album/>
       <title>Jazbu  - Serigne Abdoul Ahad Toure.mp3</title>
@@ -29,7 +29,7 @@
       <link/>
     </track>
     <track>
-      <location>../articles/nouveau/test audio/Mawahibu - Serigne Abdoul Ahad Toure.mp3</location>
+      <location>./articles/nouveau/test audio/Mawahibu - Serigne Abdoul Ahad Toure.mp3</location>
       <creator>Cheikh Ahmadou Bamba</creator>
       <album/>
       <title>Mawahibu - Serigne Abdoul Ahad Toure.mp3</title>
@@ -40,7 +40,7 @@
       <link/>
     </track>
     <track>
-      <location>../articles/nouveau/test audio/Mawahibu Serigne Mountakha Gueye.mp3</location>
+      <location>./articles/nouveau/test audio/Mawahibu Serigne Mountakha Gueye.mp3</location>
       <creator>Cheikh Ahmadou Bamba</creator>
       <album/>
       <title>Mawahibu Serigne Mountakha Gueye.mp3</title>

@@ -7,6 +7,10 @@
 		<title>Nourou Darayni</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		
+		<script src="./scripts/cufon-yui.js" type="text/javascript"></script>
+		<script src="./scripts/Bebas_400.font.js" type="text/javascript"></script>
+
         <!-- include the Tools -->
         <script src="./scripts/jquery.tools.min.js"></script>
        <!-- <script type="text/javascript" src="./scripts/jquery.easing.1.3.js"></script>-->
@@ -14,6 +18,7 @@
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
 		<link type="text/css" href="./styles/style.css" rel="stylesheet" media="screen" />
         <link href="./styles/webwidget_menu_glide.css" rel="stylesheet" type="text/css"></link>
+		<link rel="stylesheet" type="text/css" href="./includes/playlists/playlist_styles.css" />
         <!-- tabs styling -->
 		<link type="text/css" href="./styles/tabs.css" rel="stylesheet" media="screen" />
         <!-- tabs jQuery-->
@@ -58,7 +63,9 @@
 					<div id="citation">
                     <?php include './includes/citation.php' ?>
 					</div>
-					
+					<div id="playlist">
+						<?php include './includes/playlists/playlist.php' ?>
+					</div>
 					<div id="fbkBoxe">
                         <fb:like-box href="https://www.facebook.com/pages/Dahira-Nourou-Dareyni-Montreal/131945646847236" width="240" show_faces="true" stream="false" header="false"></fb:like-box>
 					</div>

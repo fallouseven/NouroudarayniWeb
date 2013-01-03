@@ -22,11 +22,13 @@
     /*~*~*~*~*~*~*~*~*~*~*/
 	
     private $titre;
-	private $date;
+	private $dateArticle;
 	private $auteur;
 	private $description;
 	private $url;
+	private $image;
 	private $images;
+	private $contenu;
     
     /*~*~*~*~*~*~*~*~*~*~*/
     /*  2. méthodes      */
@@ -61,12 +63,13 @@
 	* @param pages
     * @return void 
     */
-    public function __construct($unTitre, $uneDate, $unAuteur, $uneDesc, $unUrl) {
-		$this->$titre = $unTitre;
-		$this->$date = $uneDate;
-		$this->$auteur = $unAuteur;
-		$this->$description = $uneDesc;
-		$this->$url = $unUrl;
+    public function __construct($unTitre, $uneDate, $unAuteur, $uneDesc, $unUrl, $uneImage) {
+		$this->titre = $unTitre;
+		$this->dateArticle = $uneDate;
+		$this->auteur = $unAuteur;
+		$this->description = $uneDesc;
+		$this->url = $unUrl;
+		$this->image = $uneImage;
     } 
 	
 	
@@ -84,54 +87,58 @@
     /*  2.1 méthodes getters   */
     /*~*~*~*~*~*~*~*~*~*~*~*~*~*/
 	public function getTitre(){
-		return $this->$titre;
+		return $this->titre;
 	}
 	
 	public function getAuteur(){
-		return $this->$auteur;
+		return $this->auteur;
 	}
 	
 	public function getDate(){
-		return $this->$date;
+		return $this->dateArticle;
 	}
 	
 	public function getDescription(){
-		return $this->$description;
+		return $this->description;
 	}
 	
 	public function getUrl(){
-		return $this->$url;
+		return $this->url;
 	}
 	
-	public function getImages(){
-		return $this->$images;
+	public function getImage(){
+		return $this->image;
 	}
 	
 	/*~*~*~*~*~*~*~*~*~*~*~*~*~*/
     /*  2.1 méthodes setters   */
     /*~*~*~*~*~*~*~*~*~*~*~*~*~*/
 	public function setTitre($unTitre){
-		$this->$unTitre = $unTitre;
+		$this->unTitre = $unTitre;
 	}
 	
 	public function setAuteur($unAuteur){
-		$this->$auteur = $unAuteur;
+		$this->auteur = $unAuteur;
 	}
 	
 	public function setDate($uneDate){
-		$this->$date= $uneDate;
+		$this->dateArticle= $uneDate;
 	}
 	
 	public function setDescription($desc){
-		$this->$description = $desc;
+		$this->description = $desc;
 	}
 	
 	public function setUrl($location){
-		$this->$url = $location;
+		$this->url = $location;
 	}
 	
-	public function setImages($img){
-		$this->$images = $img;
+	public function setImage($img){
+		$this->image = $img;
+	}
+	
+	public function setImages($imgs){
+		$this->images = $imgs;
 	}
 	   
     /**

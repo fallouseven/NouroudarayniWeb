@@ -1,20 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <articles>
 	<article>
 		<titre>article1</titre>
 		<auteur>moussa</auteur>
 		<date>2/01/2009</date>
 		<description>description de l'article</description>
-		<url>//path</url>
-		<image>source image</image>		
-		<etat>nouveau</etat>
+		<image>collapsingsitenavigation.jpg</image>	
+		<url>article1.html</url>
 	</article>
 	<article>
 		<titre>article2</titre>
 		<auteur>lamda</auteur>
 		<date>20/01/2010</date>
-		<description>description of article</description>
-		<url>//url</url>
-		<image>source image</image>		
-		<etat>nouveau</etat>
+		<description>on peut marquer touce qu'on veut ici : c'est le resumé de l'article ou le debut de l'article</description>
+		<image>polaroidphotobar.jpg</image>	
+		<url>article1.html</url>
+	</article>
+	<article>
+		<titre>article3</titre>
+		<auteur>gamma</auteur>
+		<date>01/05/2011</date>
+		<description>bon on va voir si ça marche par contre. </description>
+		<image>MinimalisticSlideshowGallery.jpg</image>	
+		<url>article1.html</url>
+	</article>
+	<article>
+		<titre>article3</titre>
+		<auteur>gamma</auteur>
+		<date>01/05/2011</date>
+		<description>je veux te voir s'afficher correctement Ok?</description>
+		<image>polaroidphotobar.jpg</image>	
+		<url>article1.html</url>
 	</article>
 </articles>

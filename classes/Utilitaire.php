@@ -52,5 +52,29 @@
 			
 			return $tabFichier;
 		}
+		
+		public static function getMots($contenu, $nbMot){
+			$tabContenu = explode(" ", $contenu);
+			for($i=0 ; $i<$nbMot && $i<count($tabCoutenu); $i++){
+				$mots[] = $tabCoutenu[$i];
+			}
+			return $mots;
+		}
+		
+		public static function unset_empty_values(&$array) {
+			foreach ($array as  $v) {
+				if(is_array($v))
+				{
+				   foreach($v as $cle => $valeur)
+				   {
+					  if(empty($valeur))
+					  {
+						 unset($array[$cle]);
+					  }
+				   }
+				}
+		   }
+		}//end function
+		
 	}
 ?>

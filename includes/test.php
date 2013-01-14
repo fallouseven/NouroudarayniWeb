@@ -14,7 +14,7 @@
 	$contientfichierText = false;
 	// Get an instance of Domdocument 
 	$doc = new DOMDocument();
-	  if(!file_exists($fileArticleXML)){
+	  if(!file_exists($fileArticleXML)){ //TODO tester cas vide
 		  // specify the version and encoding
 		  $doc->version = '1.0';
 		  $doc->encoding = 'utf-8';
@@ -51,6 +51,7 @@
 				$description = (preg_match('#<p>(.*)</p>#', $chaine , $regs))?current(str_split($regs[1], 100)):"";
 				$date = date("d/m/Y");
 				$url = "../articles/articles/".basename($filename);
+				$url = str_replace(".txt", ".php", $url);
 				echo '<br>titre = '.$titre;
 				echo '<br>auteur = '.$auteur;
 				echo '<br>date = '.$date;
@@ -60,12 +61,12 @@
 				$elem->appendChild($doc->createElement('auteur', $auteur));
 				$elem->appendChild($doc->createElement('description', $description));
 				$elem->appendChild($doc->createElement('date', $date));
-				$elem->appendChild($doc->createElement('url', $url));
+				$elem->appendChild($doc->createElement('url',"./articles/articles/".basename($url)));
+				
 				//($unTitre, $uneDate, $unAuteur, $uneDesc, $unUrl, $uneImage)
-				$url = str_replace(".txt", ".php", $url);
 				$article = new Article($titre, $date, $auteur, $description, $url, "");
 				$article->setContenu($chaine);
-				creationPageArticle($article);
+				
 				//rename($filename, "../articles/articles/".basename($filename));
 
 				foreach (glob("$rep/*") as $filenameImg)
@@ -75,6 +76,9 @@
 					if(in_array($ext, $valide_image_extensions))
 					{
 						$elem->appendChild($doc->createElement('image', basename($filenameImg)));
+						//$filenameImg = str_replace("./images/images articles/", "./", $filenameImg);
+						$article->addImage(basename($filenameImg));
+						echo "yesyesyesyes yesz yes ues yes ";
 						//rename($filenameImg, "../images/images articles/".basename($filenameImg));
 					}
 					else if(in_array($ext, $valide_audio_extensions))
@@ -84,6 +88,8 @@
 					}
 				}
 				if($elem !== NULL) $note_elt->appendChild($elem); 
+				
+				creationPageArticle($article);
 			}
 			if(!$contientfichierText){
 				$docImage = new DOMDocument();
@@ -149,8 +155,9 @@
 		  $doc->save('../ressources/articlesTest.xml');
 	function creationPageArticle($article){
 		$page = "";
+		echo $article->getImage();
 	$page = '<section>
-			  <div class="imageArticle">iamge</div>
+			  <div class="imageArticle"><img  src="./images/images articles/'.$article->getImage().'" width="500" height="500" /></div>
 			  <article>
 			  	<header>
 				<h1>'.$article->getTitre().'</h1>

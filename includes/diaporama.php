@@ -1,7 +1,7 @@
 <?php
  include 'creationFichierXML.php';
 ?>
-<script src="diapoAjaxRequeteXML.js" type="text/javascript"></script>       
+<script src="./scripts/diapoAjaxRequeteXML.js" type="text/javascript"></script>       
      	<table border="3">
        		<tr>
         	  	<td>

@@ -110,6 +110,9 @@
 		return $this->image;
 	}
 	
+	public function getContenu(){
+		return $this->contenu;
+	}
 	/*~*~*~*~*~*~*~*~*~*~*~*~*~*/
     /*  2.1 méthodes setters   */
     /*~*~*~*~*~*~*~*~*~*~*~*~*~*/
@@ -139,6 +142,10 @@
 	
 	public function setImages($imgs){
 		$this->images = $imgs;
+	}
+	
+	public function setContenu($txt){
+		$this->contenu = $txt;
 	}
 	   
     /**

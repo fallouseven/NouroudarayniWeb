@@ -1,6 +1,7 @@
 <?php
 	require('../classes/Utilitaire.php');
 	require('testplaylist.php');
+	require('../classes/Article.php');
 	$valide_image_extensions = array('jpg', 'jpeg', 'gif', 'png', 'bmp');
 	$valide_audio_extensions = array('mp3','mp4','wma');
 	$dossierBaseArticle = "../articles/nouveau/*";
@@ -49,7 +50,7 @@
 				$auteur = (preg_match('#<i>(.*)</i>#', $chaine , $regs))?$regs[1]:"";
 				$description = (preg_match('#<p>(.*)</p>#', $chaine , $regs))?current(str_split($regs[1], 100)):"";
 				$date = date("d/m/Y");
-				$url = "./articles/articles/".basename($filename);
+				$url = "../articles/articles/".basename($filename);
 				echo '<br>titre = '.$titre;
 				echo '<br>auteur = '.$auteur;
 				echo '<br>date = '.$date;
@@ -60,6 +61,11 @@
 				$elem->appendChild($doc->createElement('description', $description));
 				$elem->appendChild($doc->createElement('date', $date));
 				$elem->appendChild($doc->createElement('url', $url));
+				//($unTitre, $uneDate, $unAuteur, $uneDesc, $unUrl, $uneImage)
+				$url = str_replace(".txt", ".php", $url);
+				$article = new Article($titre, $date, $auteur, $description, $url, "");
+				$article->setContenu($chaine);
+				creationPageArticle($article);
 				//rename($filename, "../articles/articles/".basename($filename));
 
 				foreach (glob("$rep/*") as $filenameImg)
@@ -141,5 +147,30 @@
 		  
 		  // Save this to images.xml
 		  $doc->save('../ressources/articlesTest.xml');
+	function creationPageArticle($article){
+		$page = "";
+	$page = '<section>
+			  <div class="imageArticle">iamge</div>
+			  <article>
+			  	<header>
+				<h1>'.$article->getTitre().'</h1>
+			  	</header>
+			   <p>'.$article->getContenu().'</p>
+			   <footer>
+				 <p>
+					Auteur : '.$article->getAuteur().'
+					 <time datetime="'.$article->getDate().'">'.$article->getDate().'</time>
+				 </p>
+			   </footer>
+			 </article>
+			 </section>';
+			
+			$fichier = fopen($article->getUrl(), "w+");
+			fwrite($fichier, $page); 
+			fclose($fichier); 
+			
+			echo "la page \n".$page;
+	
+	}
 
 ?>

@@ -47,6 +47,7 @@
 	</head>	
 	
 	<body>
+		<?php exec('crontab /includes/test.php'); ?>
 		<div id="page">
 			<div id="contenu">
                   <ul class="tabs">
@@ -63,6 +64,9 @@
 			</div>
 				
 			<div id="sideBar">
+					<div id="calendrier">
+                    	<?php include './includes/calendrier/calendrier.php' ?>
+					</div>
 					<div id="diaporama">
                     	<?php include './includes/diaporama.php' ?>
 					</div>

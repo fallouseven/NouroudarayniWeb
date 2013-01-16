@@ -47,7 +47,6 @@
 	</head>	
 	
 	<body>
-		<?php exec('crontab /includes/test.php'); ?>
 		<div id="page">
 			<div id="contenu">
                   <ul class="tabs">

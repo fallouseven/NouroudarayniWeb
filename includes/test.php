@@ -78,7 +78,6 @@
 						$elem->appendChild($doc->createElement('image', basename($filenameImg)));
 						//$filenameImg = str_replace("./images/images articles/", "./", $filenameImg);
 						$article->addImage(basename($filenameImg));
-						echo "yesyesyesyes yesz yes ues yes ";
 						//rename($filenameImg, "../images/images articles/".basename($filenameImg));
 					}
 					else if(in_array($ext, $valide_audio_extensions))

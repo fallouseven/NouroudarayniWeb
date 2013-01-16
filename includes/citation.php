@@ -1,8 +1,8 @@
 <?php
 	$url = './ressources/citations.xml';
-	$document_xml = new DomDocument(); // Instanciation de la classe DomDocument : création d'un nouvel objet
+	$document_xml = new DomDocument(); // Instanciation de la classe DomDocument : crï¿½ation d'un nouvel objet
 	$tab = array();
-	$document_xml->load($url); // Chargement à partir de citations.xml
+	$document_xml->load($url); // Chargement ï¿½ partir de citations.xml
 	
 	$elements = $document_xml->getElementsByTagName('citation');
 	
@@ -10,7 +10,7 @@
 		$tab[]=$element->nodeValue;
 	}
 	
-	echo "<blockquote> <center><b>CITATION DU JOUR</b></center></blockquote> <br />";
+	echo "<center><b>CITATION DU JOUR</b></center> <br />";
 	
-	echo $tab[rand(0, count($tab)-1)];
+	echo "<blockquote>".$tab[rand(0, count($tab)-1)]."</blockquote>";
 ?>

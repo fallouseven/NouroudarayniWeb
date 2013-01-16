@@ -10,13 +10,13 @@
 	<link rel="shortcut icon" href="images/favicon.ico" />
 
 	<!-- Grid CSS File (only needed for demo page) -->
-	<link rel="stylesheet" href="css/paragridma.css">
+	
 
 	<!-- Core CSS File. The CSS code needed to make eventCalendar works -->
-	<link rel="stylesheet" href="css/eventCalendar.css">
+	<link rel="stylesheet" href="./includes/calendrier/css/eventCalendar.css">
 
 	<!-- Theme CSS file: it makes eventCalendar nicer -->
-	<link rel="stylesheet" href="css/eventCalendar_theme_responsive.css">
+	<link rel="stylesheet" href="./includes/calendrier/css/eventCalendar_theme_responsive.css">
 
 	<!--<script src="js/jquery.js" type="text/javascript"></script>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
@@ -25,12 +25,11 @@
 <body class="calendrier" ="responsiveDemo">
 		<div class="row">
 			<div class="g4">
-				<h2 class="h4">Calendrier</h2>
 				<div id="eventCalendarLocale"></div>
 			<script>
 				$(document).ready(function() {
 					$("#eventCalendarLocale").eventCalendar({
-						eventsjson: 'json/events.json',
+						eventsjson: './includes/calendrier/json/events.json',
 						monthNames: [ "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
 							"Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre" ],
 						dayNames: [ 'Dimanche','Lundi','Mardi','Mercredi',
@@ -53,7 +52,7 @@
 
 <!--script src="js/jquery.timeago.js" type="text/javascript"></script-->
 <!--<script src="js/jquery.eventCalendar.min.js" type="text/javascript"></script>-->
-<script src="js/jquery.eventCalendar.js" type="text/javascript"></script>
+<script src="./includes/calendrier/js/jquery.eventCalendar.js" type="text/javascript"></script>
 
 
 

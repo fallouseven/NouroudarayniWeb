@@ -26,6 +26,12 @@
        	
         <script type="text/javascript">
 			  $(document).ready(function(){
+			  	$.ajax({
+						   url:$(".home").attr("href"),
+						   success: function(retour){
+						  $("div.contenant").empty().append(retour);
+						   }
+					   });
 				 $("a.ajax").click(function() {
 					 $.ajax({
 						   url:$(this).attr("href"),
@@ -44,7 +50,7 @@
 		<div id="page">
 			<div id="contenu">
                   <ul class="tabs">
-                      <li><a class = "ajax" href="./includes/home.php">Home</a></li>	
+                      <li><a class = "ajax home" href="./includes/home.php">Home</a></li>	
                       <li><a class = "ajax" href="./includes/dahira.php">Dahira</a></li>
                       <li><a class = "ajax" href="./includes/islam.php">Islam</a></li>
                       <li><a class = "ajax" href="./includes/mediatheque.php" >Mediatheque</a></li>
@@ -57,6 +63,9 @@
 			</div>
 				
 			<div id="sideBar">
+					<div id="calendrier">
+                    	<?php include './includes/calendrier/calendrier.php' ?>
+					</div>
 					<div id="diaporama">
                     	<?php include './includes/diaporama.php' ?>
 					</div>

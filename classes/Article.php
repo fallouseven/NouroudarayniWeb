@@ -27,9 +27,8 @@
 	private $description;
 	private $url;
 	private $image;
-	private $images;
+	private $images = array();
 	private $contenu;
-    
     /*~*~*~*~*~*~*~*~*~*~*/
     /*  2. méthodes      */
     /*~*~*~*~*~*~*~*~*~*~*/
@@ -107,9 +106,14 @@
 	}
 	
 	public function getImage(){
-		return $this->image;
+		if(count($this->images)>0) 
+			return $this->images[0];
+		else return $this->image;
 	}
 	
+	public function getContenu(){
+		return $this->contenu;
+	}
 	/*~*~*~*~*~*~*~*~*~*~*~*~*~*/
     /*  2.1 méthodes setters   */
     /*~*~*~*~*~*~*~*~*~*~*~*~*~*/
@@ -139,6 +143,14 @@
 	
 	public function setImages($imgs){
 		$this->images = $imgs;
+	}
+	
+	public function setContenu($txt){
+		$this->contenu = $txt;
+	}
+	
+	public function addImage($img){
+		$this->images[]= $img;
 	}
 	   
     /**

@@ -6,6 +6,7 @@
 	<head>
 		<title>Nourou Darayni</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<script src="./scripts/utils.js" type="text/javascript"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 		
 		<script src="./scripts/cufon-yui.js" type="text/javascript"></script>
@@ -21,11 +22,16 @@
 		<link rel="stylesheet" type="text/css" href="./includes/playlists/playlist_styles.css" />
         <!-- tabs styling -->
 		<link type="text/css" href="./styles/tabs.css" rel="stylesheet" media="screen" />
+		<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
         <!-- tabs jQuery-->
 		<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-       	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="./scripts/jquery.youtubepopup.min.js"></script>
+       	<!--<script type="text/javascript" src="./scripts/jquery.history.js"></script>-->
+       	<script type="text/javascript" src="./scripts/history.js"></script>
         <script type="text/javascript">
-			  $(document).ready(function(){
+        
+			/* $(document).ready(function(){
 			  	$.ajax({
 						   url:$(".home").attr("href"),
 						   success: function(retour){
@@ -41,7 +47,9 @@
 					   });
 					   return false;
 				 });
-			  });
+			  });*/
+			  
+			  
 		</script>
 
 	</head>	

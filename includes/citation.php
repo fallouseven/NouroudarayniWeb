@@ -10,7 +10,9 @@
 		$tab[]=$element->nodeValue;
 	}
 	
+	echo '<div class="citation">';
 	echo "<center><b>CITATION DU JOUR</b></center> <br />";
 	
 	echo "<blockquote>".$tab[rand(0, count($tab)-1)]."</blockquote>";
+	echo '</div>';
 ?>

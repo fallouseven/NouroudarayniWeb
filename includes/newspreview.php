@@ -1,7 +1,8 @@
 <?php
-require('gestionArticle.php');
-$fichier = 'articlesTest.xml';
-echo '<table><tr>';
+require ('gestionArticle.php');
+$fichier = 'articles.xml';
+
+//echo '<div class="tab_articles_prev">';
 lireFichierXML($fichier);
-echo '</tr></table>'
+//echo '</div>';
 ?>

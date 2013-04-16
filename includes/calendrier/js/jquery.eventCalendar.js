@@ -415,8 +415,8 @@ $.fn.eventCalendar.defaults = {
 	onlyOneDescription: true,
 	openEventInNewWindow: false,
 	eventsScrollable: false,
-	moveSpeed: 500,	// speed of month move when you clic on a new date
-	moveOpacity: 0.15, // month and events fadeOut to this opacity
+	moveSpeed: 0,	// speed of month move when you clic on a new date
+	moveOpacity: 0, // month and events fadeOut to this opacity
 	jsonData: "", 	// to load and inline json (not ajax calls) 
 	cacheJson: false	// if true plugin get a json only first time and after plugin filter events
 					// if false plugin get a new json on each date change

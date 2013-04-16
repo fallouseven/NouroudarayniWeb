@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dieuwrigne nom="Babacar Diouf">
+	<secretariat-general nom="Ablaye Badiane">
+		<finance>
+			<dieuwrigne nom="">
+				<membre>moussa</membre>
+				<membre>moussa</membre>
+				<membre>moussa</membre>
+				<membre>moussa</membre>
+			</dieuwrigne>
+		</finance>
+		<projet>
+			<dieuwrigne nom="">
+				<membre></membre>
+			</dieuwrigne>
+		</projet>
+		<communication>
+			<dieuwrigne nom="">
+				<membre></membre>
+			</dieuwrigne>
+		</communication>
+		<culturelle>
+			<dieuwrigne nom="">
+				<membre></membre>
+			</dieuwrigne>
+		</culturelle>
+		<organisation>
+			<dieuwrigne nom="">
+				<membre></membre>
+			</dieuwrigne>
+		</organisation>
+	</secretariat-general>
+</dieuwrigne>

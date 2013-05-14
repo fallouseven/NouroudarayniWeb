@@ -7,9 +7,10 @@
 	$dossierRessource = "../ressources/";
 	
 	function lireFichierXML($fichier){
+		$tabArticles = array();
 		$url = "../ressources/".$fichier;
 		$document_xml = new DomDocument(); // Instanciation de la classe DomDocument : création d'un nouvel objet
-		$document_xml->load($url); // Chargement à partir de citations.xml
+		$document_xml->load($url); 
 		$lesArticles = $document_xml->getElementsByTagName('article');
 		//array_reverse($lesArticles); //not a array
 		$index = 0;
@@ -24,21 +25,28 @@
 			$image = './images/images articles/preview/'.$image;
 			//$url = '../articles/'.$url;
 			$unArticle = new Article($titre, $date, $auteur, $description, $url, $image);
-			afficherArticle($unArticle, ++$index);
+			/*if($index == 0){
+				AfficherFirstArticle($unArticle->getUrl());
+			}*/
+			afficherArticle($unArticle, $index);	
+			$index++;
 		}
 		
 	}
-	
+
 	function afficherArticle($article, $index){
-		$content = '<td><div class="cn_content"><table>
-		<tr><td colspan="2" cellspacing="0" cellpadding="0"><img src="'.$article->getImage().'" alt=""/></td></tr>
-		<tr><td colspan="2" cellspacing="0" cellpadding="0"><h1 class="title">'.$article->getTitre().'</h1></td></tr>
-		<tr><td colspan="2" cellspacing="0" cellpadding="0"><p>'.$article->getDescription().'</p></td></tr>
-		<tr><td><span class="cn_date">'.$article->getDate().'</span></td>
-		<td align="left"><span class="cn_auteur">'.$article->getAuteur().'</span></td></tr>
-		<tr><td colspan="2"><a class="cn_more ajax" href="'.$article->getUrl().'">Lire suite</a></td></tr>
-	</table></div></td>';
-	echo $content.'<br/>';
+		$content;
+		$content= '<div class="cn_content"><table class="articlePrev">';
+		if($article->getImage() !== "blank.jpg"){
+			$content.= '<tr><td cellspacing="0" cellpadding="0"><img src="'.$article->getImage().'" alt=""/></td></tr>';
+		}
+		
+		$content.= '<tr><td cellspacing="0" cellpadding="0"><div class="title">'.$article->getTitre().'</div></td></tr>
+		<tr><td cellspacing="0" cellpadding="0"><div class="description">'.$article->getDescription().'</div></td></tr>
+		<tr><td><span class="cn_date">'.$article->getDate().'</span></td></tr>
+		<tr><td class="lireSuite"><span class="cn_more"><a class="cn_more ajax" href="'.$article->getUrl().'">Lire suite</a></span></td></tr>
+	</table></div>';
+	echo $content;
 	}
 	
 	function creerArticleXML(){
@@ -107,8 +115,7 @@
 		  // Display the XML content we just created
 		  //echo $doc->saveXML();
 		  
-		  // Save this to images.xml
-		  $doc->save('../ressources/articlesTest.xml');
+		  $doc->save('../ressources/articles.xml');
 	}
 	
 ?>

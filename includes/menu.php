@@ -1,65 +1,129 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<ul id="menu">
+    
+    <li class="noItem"><a href="#">Accueil</a><!-- Begin Home Item -->
+    
+   
+    </li><!-- End Home Item -->
 
-	<head>
-		<title>Menu</title>
-		<link type="text/css" href="./styles/styleMenu.css" rel="stylesheet" media="screen" />
-		<script type="text/javascript" src="./scripts/scriptMenu.js"></script>		
-		<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
-	</head>	
-	
-	<body>	
-		<div id="menu">
-			<ul id="MenuDeroulant">
-				<li> <a class="active" href="./index.php"> <img src="./images/icon_home.gif" alt="Icone Home" /> </a> </li>
-			    <li><a href="#">Dahira</a>			
-			        <ul>            	
-			            <li><a href="#">Historique</a></li>		
-			            <li><a href="#">Organigramme</a></li>		
-			            <li><a href="#">"Projet"</a></li>		
-			            <li><a href="#">Contact</a></li>
-			        </ul>			
-			    </li>		
-			    <li><a href="#">Islam</a>			
-			        <ul>		
-			            <li><a href="#">Coran et Sunna</a></li>		
-			            <li><a href="#">Mouroudisme</a></li>          		
-			        </ul>			
-			    </li>
-			    <li><a href="#">Mediateque</a>			
-			        <ul>		
-			            <li><a href="#">Videos</a></li>		
-			            <li><a href="#">Audios</a></li>  		            
-			            <li><a href="#">Photos</a></li>         		
-			        </ul>			
-			    </li>		
-			    <li><a href="#">Contact</a></li>	
-			</ul>
-		</div>
-	
-		<div id="login">
-			<a href="#" rel="#mies1"> Se connecter </a>  <span> &nbsp; | &nbsp; </span>
-			<a href="#" rel="#mies2"> S'inscrire </a>
-			
-			<!-- overlays -->
-			<div class="login_overlay" id="mies1" style="top:300px">
-				<?php include("./includes/loginForm.php"); ?>
-			</div>
-			
-			<div class="login_overlay" id="mies2">
-				<?php include("./includes/inscriptionForm.php"); ?>
-			</div>
-			
-			<script>
-				// What is $(document).ready ? See: http://flowplayer.org/tools/documentation/basics.html#document_ready
-				$(document).ready(function() {			
-					$("a[rel]").overlay({mask: '#000', effect: 'apple'});
-				});
-			</script>
-					
-		</div>
- 
-	</body>
-</html>
+   <li><a href="#" class="drop">Dahira</a><!-- Begin Dahira Item -->
+    
+        <div class="dropdown_4columns"><!-- Begin Dahira container -->
+            
+            <div class="col_1">
+            
+                <h3><a class="ajax" href="pages/dahira/historique.php">Historique</a></h3>
+                 
+            </div>
+    
+            <div class="col_1">
+            
+                <h3><a class="ajax" href="pages/dahira/organigramme.php">Organigramme</a></h3>
+                 
+            </div>
+    
+            <div class="col_1">
+            
+                <h3><a class="ajax" href="pages/dahira/projet.php">Projet</a></h3>
+                 
+            </div>
+    
+            <div class="col_1">
+            
+                <h3><a class="ajax" href="pages/dahira/contact/contactform.php">Contact</a></h3>  
+                 
+            </div>
+            
+        </div><!-- End 4 columns container -->
+    
+    </li><!-- End 4 columns Item -->
+    <li><a href="#" class="drop">Islam</a><!-- Begin 4 columns Item -->
+    
+        <div class="dropdown_4columns"><!-- Begin 4 columns container -->
+        
+           <div class="col_1">
+            
+                <h3><a href="#">Mouridisme</a></h3>
+                 
+            </div>
+    
+            <div class="col_1">
+            
+                <h3><a href="#">Coran</a></h3>
+                 
+            </div>
+        </div><!-- End 4 columns container -->
+    
+    </li><!-- End 4 columns Item -->
+
+ <li><a href="#" class="drop">Médiathèque</a><!-- Begin Médiathèque Item -->
+    
+        <div class="dropdown_4columns"><!-- Begin  Médiathèque container -->
+        
+            <div class="col_1">
+            
+                <h3><a href="#">Vidéos</a></h3>
+                 
+            </div>
+    
+            <div class="col_1">
+            
+                <h3><a href="#">Audios</a></h3>
+                 
+            </div>
+    
+            <div class="col_1">
+            
+                <h3><a href="#">Photos</a></h3>
+                 
+            </div>
+            
+        </div><!-- End 4 Médiathèque container -->
+    
+    </li><!-- End Médiathèque Item -->
+
+
+ <li class="noItem"><a href="#" >TV</a><!-- Begin TV Item -->
+    
+    </li><!-- End TV Item -->
+
+
+	<li class="menu_right"><a href="#" class="drop">Connecter</a> <!-- Begin connecter Item -->
+    
+		<div class="dropdown_1column login align_right"> <!-- Begin S'inscrire container -->
+        
+                <div class="col_1">
+                    <form id="loginForm" class="form">
+                        <fieldset id="body">
+                            <fieldset>
+                                <label for="email">Email Address</label>
+                                <input type="text" name="email" id="email" />
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" />
+                            </fieldset>
+                            <input type="submit" id="login" value="Sign in" />
+                            <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>
+                        </fieldset>
+                        <span><a href="#">Forgot your password?</a></span>
+                    </form>
+                </div>
+                
+		</div><!-- End Connecter container -->
+        
+	</li><!-- End Connecter Item -->
+
+    <li class="menu_right"><a href="#" class="drop">S'inscrire</a><!-- Begin S'inscrire Item -->
+    
+        <div class="dropdown_1column inscription align_right"><!-- Begin S'inscrire container -->
+            <div class="col_1">
+    
+                <?php include './includes/inscriptionForm.php' ?>
+    
+            </div>
+            
+        </div><!-- End S'inscrire container -->
+        
+    </li><!-- End S'inscrire Item -->
+</ul>

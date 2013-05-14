@@ -76,5 +76,39 @@
 		   }
 		}//end function
 		
-	}
+		public static function lireFichierXML($fichier, $parent, $tabNoeud, $nomClass){
+			$tabArticles = array();
+			$tabObject = array();
+			//$url = "../ressources/".$fichier;
+			$document_xml = new DomDocument(); // Instanciation de la classe DomDocument : création d'un nouvel objet
+			$document_xml->load($fichier); 
+			$lesElements = $document_xml->getElementsByTagName($parents);
+			$index = 0;
+			$page_article_prev = '';
+			foreach($lesElements as $element){
+				$params = array();
+				foreach($tabNoeud as $noeud){
+					$params[] = $element->getElementsByTagName($noeud)->item(0)->nodeValue;
+				}
+				//creer objet avec params $tabItems
+				$tabObject[] = new create_instance($class, $params);
+			}
+			return $tabObject;
+		}
+	
+		public static function create_instance($className, $params) {
+			$reflection_class = new ReflectionClass($className);
+			return $reflection_class->newInstanceArgs($params);
+		}
+		public static function getProperties($className){
+			$object = new ReflectionClass($className);
+			$props   = $object->getProperties();
+			$tabName = array();
+			foreach ($props as $prop) {
+				$tabName[]= $prop->getName() . "\n";
+			}
+			return $tabName;
+		}
+		
+}
 ?>

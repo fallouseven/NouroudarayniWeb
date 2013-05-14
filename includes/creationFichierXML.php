@@ -17,7 +17,7 @@
   $doc->appendChild($note_elt);
   
   // Create 
-  $rp="./images/diaporama"; // nom du répertoire à lister
+  $rp="./images/diaporama"; // nom du répertoire à lister TO CHANGE
  $rep=opendir($rp);
 while ($sous_fichier=readdir($rep)) 	{ // parcours du répertoire
 	if (($sous_fichier==".") || ($sous_fichier=="..")){ }
@@ -37,7 +37,7 @@ closedir($rep);
   //echo $doc->saveXML();
   
   // Save this to images.xml
-  $doc->save('./ressources/images.xml');
+  $doc->save('./ressources/images.xml');//TO CHANGE
   
   
 ?>

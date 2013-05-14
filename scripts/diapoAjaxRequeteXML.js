@@ -1,5 +1,6 @@
 // JavaScript Document
 			var tabImages = new Array();
+			var content ='';
 			indice=0;
 			function createXHR() {
 			
@@ -23,17 +24,17 @@
 					reponseEnXML=requete.responseXML;
 					listeElements=reponseEnXML.getElementsByTagName("image");
 					tabImages = new Array(listeElements.length);
+					content = '<ul class="diaporama1">';
 					for (i=0;i<listeElements.length;i++) {
-						 tabImages[i]=listeElements[i].childNodes[0].nodeValue;
-					 }				 diaporamaSuivant();
+						 content += '<li><img src="./images/diaporama/'+listeElements[i].childNodes[0].nodeValue+'" class="imgDiapo" alt="nourou darayni" title="diaporama"/></li>';
+					 }	
+					 content+='</ul>';		
+					 document.getElementById("diaporama").innerHTML= content;
+					 $(".diaporama1").jDiaporama({
+						animationSpeed: "slow",
+						delay:2
+					});
 				}
 			}
 			  
-			function diaporamaSuivant() {
-     			document.getElementById("diapo").src = "./images/diaporama/"+tabImages[indice];
-     			indice++;
-				if(indice == tabImages.length)
-					indice = 0;
-     			setTimeout(diaporamaSuivant,3000);
-			}
 			window.onload = envoyerRequeteXML;

@@ -1,59 +1,21 @@
-<h3>Inscription</h3>
-
-<form method="post" action="./includes/verifLogin.php">
-	<table border="0" align="center">
-    	<tr>
-    		<td>
-    			<p>Nom &nbsp; &nbsp; </p>
-    		</td>
-     		<td>
-      			<input type="text" name="nom">
-     		</td>
-    	</tr>
-    	
-    	<tr>
-    		<td>
-    			<p>Prenom &nbsp; &nbsp; </p>
-    		</td>
-     		<td>
-      			<input type="text" name="prenom">
-     		</td>
-    	</tr>
-		
-		<tr>
-    		<td>
-    			<p>Courriel &nbsp; &nbsp; </p>
-    		</td>
-     		<td>
-      			<input type="text" name="login">
-     		</td>
-    	</tr>
-
-		
-    	<tr>
-    		<td>
-    			<p>Pseudo &nbsp; &nbsp; </p>
-    		</td>
-     		<td>
-      			<input type="text" name="pseudo">
-     		</td>
-    	</tr>
-
-    	
-   		<tr>
-     		<td>
-     			<p>Mot de passe &nbsp; &nbsp; </p>
-     		</td>
-     		<td>
-      			<input type="password" name="password">
-     		</td>
-    	</tr>
-    	
-    	<tr>
-     		<td colspan="2" align="center">
-     			<br/> <br/>
-         		<input type="submit" name="submit" value="S'inscrire">
-      		</td>
-    	</tr>
-   	</table>
+<form id="inscriptionForm" class="form" method="post" action="./includes/verifLogin.php">
+    <fieldset id="body">
+    	 <fieldset>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" />
+        </fieldset>
+        <fieldset>
+            <label for="nom">Prenom</label>
+            <input type="text" name="prenom" id="prenom" />
+        </fieldset>
+        <fieldset>
+            <label for="email">Email Address</label>
+            <input type="text" name="email" id="email" />
+        </fieldset>
+        <fieldset>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+        </fieldset>
+        <input type="submit" id="inscription" value="Inscription" />
+    </fieldset>
 </form>

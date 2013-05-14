@@ -27,9 +27,8 @@
 	private $description;
 	private $url;
 	private $image;
-	private $images;
+	private $images = array();
 	private $contenu;
-    
     /*~*~*~*~*~*~*~*~*~*~*/
     /*  2. méthodes      */
     /*~*~*~*~*~*~*~*~*~*~*/
@@ -107,9 +106,14 @@
 	}
 	
 	public function getImage(){
-		return $this->image;
+		if(count($this->images)>0) 
+			return $this->images[0];
+		else return $this->image;
 	}
 	
+	public function getContenu(){
+		return $this->contenu;
+	}
 	/*~*~*~*~*~*~*~*~*~*~*~*~*~*/
     /*  2.1 méthodes setters   */
     /*~*~*~*~*~*~*~*~*~*~*~*~*~*/
@@ -139,6 +143,43 @@
 	
 	public function setImages($imgs){
 		$this->images = $imgs;
+	}
+	
+	public function setContenu($txt){
+		$this->contenu = $txt;
+	}
+	
+	public function addImage($img){
+		$this->images[]= $img;
+	}
+	
+	public function creationPageArticle($article){
+		$page = "";
+		//echo $article->getImage();
+		$page = '<section class="article">
+				<header>
+					<h1>'.$article->getTitre().'</h1>
+			  	</header>'.
+			  $page.= $article->getImage() !== "blank.jpg"? 
+			  '<div class="imageArticle"><center><img  class="imgArticle" src="./images/images articles/'.$article->getImage().'" /></center></div>':'';
+			  $page.= '<article>
+			   <article>'.$article->getContenu().'</article>
+			   <footer class="signature">
+				 <p>
+					Auteur : '.$article->getAuteur().'
+					 <time datetime="'.$article->getDate().'">'.$article->getDate().'</time>
+				 </p>
+			   </footer>
+			 </article>
+			 </section>
+			 <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
+			<fb:comments></fb:comments>';//facebook comment
+			//echo $page;
+			$fichier = fopen($article->getUrl(), "w+");
+			fwrite($fichier, $page); 
+			fclose($fichier); 
+			
+			//echo "la page \n".$page;
 	}
 	   
     /**

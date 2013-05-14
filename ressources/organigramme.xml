@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dahira>
+	<dieuwrigne>Babacar Diouf</dieuwrigne>
+	<secretariat-general>
+		<membre>Ablaye Badiane</membre>
+		<membre>Cheikh Bamba Diop</membre>
+		<finance>
+				<dieuwrigne>
+				<membre>moussa</membre>
+				<membre>moussa</membre>
+				<membre>moussa</membre>
+				<membre>moussa</membre>
+			</dieuwrigne>
+		</finance>
+		<projet>
+			<dieuwrigne>
+				<membre></membre>
+			</dieuwrigne>
+		</projet>
+		<communication>
+			<dieuwrigne>
+				<membre></membre>
+			</dieuwrigne>
+		</communication>
+		<culturelle>
+			<dieuwrigne nom="">
+				<membre></membre>
+			</dieuwrigne>
+		</culturelle>
+		<organisation>
+			<dieuwrigne nom="">
+				<membre></membre>
+			</dieuwrigne>
+		</organisation>
+	</secretariat-general>
+</dahira>

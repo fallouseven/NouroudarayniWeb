@@ -7,7 +7,7 @@
 }
 .eventCalendar-wrap .arrow { 
 	position:absolute; 
-	z-index:5; 
+	/*z-index:5; */
 	top:3px;
 }
 	.eventCalendar-wrap .prev {
@@ -24,11 +24,10 @@
 	.eventsCalendar-monthWrap {
 		position:absolute;
 		top:0; left:0;
-		z-index:2;
+		/*z-index:2;*/
 	}
 		.eventsCalendar-monthWrap.currentMonth { 
-			z-index:1;
-		}	
+			/*z-index:1;*/		}	
 .eventsCalendar-daysList { 
 	display:table;
 	width:100%;
@@ -67,11 +66,11 @@
 }	
 .eventsCalendar-list {
 	position:relative;
-	z-index:1;
+	/*z-index:1;*/
 	
 }	
 	.eventsCalendar-list.oldEventList {
-		z-index:2;
+		/*z-index:2;*/
 	}
 	.eventsCalendar-subtitle {
 		padding-left:5px;

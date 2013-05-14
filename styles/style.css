@@ -22,7 +22,7 @@ h1{
 	width: 1000px;
 	margin: 150px auto 0 auto;
 	padding: 0;
-	border: 1px solid #0C0C0C;
+	border-radius: 11px 11px;
 	background-color: white;
 }
 
@@ -71,12 +71,7 @@ h1{
 
 /* ============================== FOOTER ============================== */
 
-#footer {
-	clear: both;
-	width: 980px;
-	height: 30px;
-	text-align: center;
-}
+
 
  /************************************************************************************
 							STYLE PREVIEXS ARTICLE
